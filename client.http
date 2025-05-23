@@ -1,0 +1,15 @@
+@env = local
+@baseUrl = https://api.pluggy.ai
+@clientId = xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+@clientSecret = xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+@authToken = {{authenticate.response.body.access_token}}
+
+# @name authenticate
+POST {{baseUrl}}/auth
+Content-Type: application/json
+
+{
+    "clientId": "{{clientId}}",
+    "clientSecret": "{{clientSecret}}"
+}
